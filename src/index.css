@@ -1,0 +1,135 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  html {
+    scroll-smooth: always;
+    @apply scroll-smooth;
+  }
+
+  :root {
+    /* Tatu Enterprises - Light theme */
+    --background: 40 30% 98%;
+    --foreground: 220 25% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 25% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 25% 12%;
+
+    --primary: 358 78% 48%;            /* Tatu red */
+    --primary-foreground: 40 30% 98%;
+    --primary-glow: 358 85% 60%;
+
+    --secondary: 40 20% 94%;
+    --secondary-foreground: 220 25% 12%;
+
+    --muted: 40 20% 94%;
+    --muted-foreground: 220 12% 40%;
+
+    --accent: 38 92% 48%;              /* Tatu gold (slightly deeper for light bg) */
+    --accent-foreground: 220 25% 12%;
+    --accent-glow: 42 95% 60%;
+
+    --destructive: 0 84% 55%;
+    --destructive-foreground: 40 30% 98%;
+
+    --border: 220 14% 88%;
+    --input: 220 14% 88%;
+    --ring: 38 92% 48%;
+
+    --radius: 0.75rem;
+
+    /* Brand gradients & shadows */
+    --gradient-brand: linear-gradient(135deg, hsl(358 78% 48%) 0%, hsl(20 88% 52%) 60%, hsl(38 92% 55%) 100%);
+    --gradient-fire: linear-gradient(120deg, hsl(358 80% 42%), hsl(38 92% 55%));
+    --gradient-dark: linear-gradient(180deg, hsl(40 30% 98%), hsl(40 25% 94%));
+    --gradient-glow: radial-gradient(ellipse at top, hsl(358 80% 45% / 0.18), transparent 60%);
+
+    --shadow-brand: 0 20px 60px -20px hsl(358 80% 45% / 0.35);
+    --shadow-gold: 0 10px 40px -10px hsl(38 92% 50% / 0.35);
+    --shadow-elegant: 0 30px 80px -30px hsl(220 30% 30% / 0.25);
+
+    --transition-smooth: cubic-bezier(0.22, 1, 0.36, 1);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    /* Tatu Enterprises - Brand-driven dark/red/gold system */
+    --background: 220 18% 7%;
+    --foreground: 40 30% 96%;
+
+    --card: 220 16% 10%;
+    --card-foreground: 40 30% 96%;
+
+    --popover: 220 16% 10%;
+    --popover-foreground: 40 30% 96%;
+
+    --primary: 358 78% 48%;
+    --primary-foreground: 40 30% 98%;
+    --primary-glow: 358 85% 60%;
+
+    --secondary: 220 14% 14%;
+    --secondary-foreground: 40 30% 96%;
+
+    --muted: 220 12% 16%;
+    --muted-foreground: 40 12% 70%;
+
+    --accent: 38 92% 55%;
+    --accent-foreground: 220 18% 7%;
+    --accent-glow: 42 95% 65%;
+
+    --destructive: 0 84% 55%;
+    --destructive-foreground: 40 30% 98%;
+
+    --border: 220 12% 18%;
+    --input: 220 12% 18%;
+    --ring: 38 92% 55%;
+
+    --gradient-dark: linear-gradient(180deg, hsl(220 18% 7%), hsl(220 22% 4%));
+    --gradient-glow: radial-gradient(ellipse at top, hsl(358 80% 45% / 0.35), transparent 60%);
+    --shadow-brand: 0 20px 60px -20px hsl(358 80% 45% / 0.55);
+    --shadow-gold: 0 10px 40px -10px hsl(38 92% 55% / 0.45);
+    --shadow-elegant: 0 30px 80px -30px hsl(220 30% 0% / 0.7);
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
