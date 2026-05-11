@@ -1,3 +1,3 @@
-# Welcome to your Lovable project
+# Welcome to Tatu Enterprises!
 
-TODO: Document your project here
+
