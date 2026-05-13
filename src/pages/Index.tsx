@@ -1,7 +1,8 @@
-import { Navbar } from "@/components/Navbar";
-import { Hero } from "@/components/Hero";
-import { ContactFooter } from "@/components/ContactFooter";
-import { WhatsAppButton } from "@/components/WhatsAppButton";
+import { Navbar } from "@/components/layout/Navbar";
+import { Hero } from "@/components/sections/Hero";
+import { ContactFooter } from "@/components/layout/ContactFooter";
+import { WhatsAppButton } from "@/components/common/WhatsAppButton";
+import { SEO } from "@/components/common/SEO";
 import { useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
@@ -13,6 +14,9 @@ const Index = () => {
 
   return (
     <main className="min-h-screen bg-background font-sans text-foreground antialiased selection:bg-accent selection:text-accent-foreground">
+      <SEO 
+        description="East Africa's leading technology and engineering firm. We merge digital innovation with physical infrastructure to build smarter environments."
+      />
       <Navbar />
       <Hero />
       <div className="container relative py-32 overflow-hidden">
@@ -30,10 +34,10 @@ const Index = () => {
             Welcome to Tatu Enterprises
           </div>
           
-          <h2 className="font-display text-5xl font-bold leading-[1.1] tracking-tight text-foreground md:text-7xl">
-            Building beyond the{" "}
+          <h2 className="font-display text-5xl font-bold leading-[1.1] tracking-tight text-foreground md:text-7xl tracking-tighter">
+            Software that Powers{" "}
             <span className="bg-gradient-fire bg-clip-text text-transparent">
-              obvious.
+              Growth Beyond Limits
             </span>
           </h2>
           <p className="mt-8 text-xl leading-relaxed text-muted-foreground md:px-20">
@@ -43,10 +47,10 @@ const Index = () => {
           </p>
           
           <div className="mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row">
-            <Button asChild variant="hero" size="xl" className="px-10 rounded-full h-16 text-lg">
+            <Button asChild variant="defaultGold" size="xl" className="px-10 rounded-full h-16 text-lg">
               <Link to="/services">Explore Our Services</Link>
             </Button>
-            <Button asChild variant="outline" size="xl" className="px-10 rounded-full h-16 text-lg border-accent/20 hover:border-accent">
+            <Button asChild variant="outlineGold" size="xl" className="px-10 rounded-full h-16 text-lg">
               <Link to="/about">About the Agency</Link>
             </Button>
           </div>

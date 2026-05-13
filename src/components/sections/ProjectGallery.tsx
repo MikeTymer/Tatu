@@ -1,7 +1,8 @@
 import { motion } from "motion/react";
-import biometric from "@/assets/biometric.jpg";
-import cctv from "@/assets/cctv.jpg";
-import smartHome from "@/assets/smart-home.jpg";
+// Realistic professional stock images
+const biometric = "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1200";
+const cctv = "https://images.unsplash.com/photo-1551808525-51feec1bc9b2?auto=format&fit=crop&q=80&w=1200";
+const smartHome = "https://images.unsplash.com/photo-1558002038-1055907df827?auto=format&fit=crop&q=80&w=1200";
 
 const galleryProjects = [
   {
@@ -48,6 +49,7 @@ export const ProjectGallery = () => {
                 <img
                   src={project.image}
                   alt={project.title}
+                  referrerPolicy="no-referrer"
                   className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
                 />
               </div>

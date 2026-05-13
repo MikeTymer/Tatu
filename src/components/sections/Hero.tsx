@@ -3,23 +3,24 @@ import { motion, AnimatePresence } from "motion/react";
 import { ArrowRight, Sparkles, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
-import heroVilla from "@/assets/hero-villa.jpg";
-import webDev from "@/assets/web-dev.jpg";
-import { WhatsAppButton } from "./WhatsAppButton";
+// Realistic professional stock images
+const posMachine = "https://images.unsplash.com/photo-1556742049-97ef31d06371?auto=format&fit=crop&q=80&w=1200";
+const softwareMeeting = "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=1200";
+import { WhatsAppButton } from "../common/WhatsAppButton";
 
 const projects = [
   {
     id: 0,
-    label: "Latest project",
-    title: "Smart residence, full automation, biometric access & CCTV",
-    image: heroVilla,
+    label: "Enterprise Software",
+    title: "Scaling business operations with robust cloud infrastructure",
+    image: posMachine,
     link: "https://jena-pos-business-suit-app.vercel.app?ref=VFKM2H",
   },
   {
     id: 1,
-    label: "Enterprise Solution",
-    title: "Jena POS Business Suite",
-    image: webDev,
+    label: "Digital Transformation",
+    title: "Modernizing legacy systems for growth beyond limits",
+    image: softwareMeeting,
     link: "https://jena-pos-business-suit-app.vercel.app?ref=VFKM2H",
   },
 ];
@@ -59,14 +60,14 @@ export const Hero = () => {
           <div className="mb-6 inline-flex items-center gap-2 rounded-full border border-accent/30 bg-accent/5 px-4 py-1.5">
             <Sparkles className="h-3.5 w-3.5 text-accent" />
             <span className="text-xs font-medium uppercase tracking-[0.2em] text-accent">
-              Building Beyond The Obvious
+              Growth Beyond Limits
             </span>
           </div>
 
           <h1 className="font-display text-4xl font-bold leading-[1.05] tracking-tight text-foreground sm:text-5xl md:text-6xl">
-            Smarter systems.{" "}
+            Software that Powers{" "}
             <span className="bg-gradient-fire bg-clip-text text-transparent">
-              Stronger foundations.
+              Growth Beyond Limits
             </span>
           </h1>
 
@@ -76,10 +77,10 @@ export const Hero = () => {
             environments across Uganda and Kenya.
           </p>
 
-          <div className="mt-8 flex flex-wrap items-center gap-3">
-            <WhatsAppButton label="Start a project" size="xl" />
-            <Button asChild variant="outlineGold" size="xl">
-              <Link to="/services">Explore solutions</Link>
+          <div className="mt-10 flex flex-wrap items-center gap-4">
+            <WhatsAppButton label="Start a project" size="xl" className="shadow-brand" />
+            <Button asChild variant="defaultGold" size="xl" className="px-12">
+              <Link to="/services">Explore Our Services</Link>
             </Button>
           </div>
 
@@ -117,6 +118,7 @@ export const Hero = () => {
                 <img
                   src={projects[index].image}
                   alt={projects[index].title}
+                  referrerPolicy="no-referrer"
                   className="h-full w-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent" />

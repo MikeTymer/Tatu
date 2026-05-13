@@ -1,15 +1,15 @@
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
-import { TatuLogo } from "./TatuLogo";
+import { TatuLogo } from "../common/TatuLogo";
 import { Button } from "@/components/ui/button";
-import { ThemeToggle } from "./ThemeToggle";
+import { ThemeToggle } from "../common/ThemeToggle";
 import { Link, useLocation } from "react-router-dom";
-import { WhatsAppButton } from "./WhatsAppButton";
+import { WhatsAppButton } from "../common/WhatsAppButton";
 
 const links = [
-  { href: "/home", label: "Home" },
+  { href: "/", label: "Home" },
   { href: "/about", label: "About" },
-  { href: "/", label: "Services" },
+  { href: "/services", label: "Services" },
   { href: "/team", label: "Team" },
   { href: "/contact", label: "Contact" },
 ];
@@ -35,8 +35,8 @@ export const Navbar = () => {
       }`}
     >
       <nav className="container flex h-20 items-center justify-between">
-        <Link to="/" className="flex items-center gap-3">
-          <TatuLogo className="h-11 w-11" />
+        <Link to="/" className="flex items-center">
+          <TatuLogo className="h-10" />
         </Link>
 
         <div className="hidden items-center gap-10 md:flex">

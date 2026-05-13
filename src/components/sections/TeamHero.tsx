@@ -1,13 +1,15 @@
 import { motion } from "motion/react";
-import biometric from "@/assets/biometric.jpg";
+// Realistic professional stock images
+const cctv = "https://images.unsplash.com/photo-1551808525-51feec1bc9b2?auto=format&fit=crop&q=80&w=1200";
 
-export const ServicesHero = () => {
+export const TeamHero = () => {
   return (
     <section className="relative h-[40vh] min-h-[350px] w-full overflow-hidden">
       <div className="absolute inset-0">
         <img
-          src={biometric}
-          alt="Technical solutions and engineering"
+          src={cctv}
+          alt="Our expert team"
+          referrerPolicy="no-referrer"
           className="h-full w-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/60 to-background" />
@@ -21,17 +23,17 @@ export const ServicesHero = () => {
           className="max-w-2xl"
         >
           <div className="text-xs font-bold uppercase tracking-[0.3em] text-accent">
-            Our Solutions
+            Our People
           </div>
           <h1 className="mt-4 font-display text-4xl font-bold leading-tight tracking-tight text-foreground md:text-6xl">
-            Excellence in <br />
+            The Minds <br />
             <span className="bg-gradient-fire bg-clip-text text-transparent">
-              Every Dimension.
+              Behind the Work.
             </span>
           </h1>
           <p className="mt-6 text-lg text-muted-foreground">
-            From physical infrastructure to digital transformations, we provide 
-            end-to-end expertise for modern enterprises.
+            Meet the multidisciplinary team of engineers, developers, and visionaries 
+            dedicated to building beyond the obvious.
           </p>
         </motion.div>
       </div>

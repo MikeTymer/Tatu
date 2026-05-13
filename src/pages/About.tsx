@@ -1,12 +1,13 @@
-import { Navbar } from "@/components/Navbar";
-import { AboutHero } from "@/components/AboutHero";
-import { Pillars } from "@/components/Pillars";
-import { CoreBeliefs } from "@/components/CoreBeliefs";
-import { ProjectGallery } from "@/components/ProjectGallery";
-import { VisionMission } from "@/components/VisionMission";
-import { WhyUs } from "@/components/WhyUs";
-import { ContactFooter } from "@/components/ContactFooter";
-import { WhatsAppButton } from "@/components/WhatsAppButton";
+import { Navbar } from "@/components/layout/Navbar";
+import { AboutHero } from "@/components/sections/AboutHero";
+import { Pillars } from "@/components/sections/Pillars";
+import { CoreBeliefs } from "@/components/sections/CoreBeliefs";
+import { ProjectGallery } from "@/components/sections/ProjectGallery";
+import { VisionMission } from "@/components/sections/VisionMission";
+import { WhyUs } from "@/components/sections/WhyUs";
+import { ContactFooter } from "@/components/layout/ContactFooter";
+import { WhatsAppButton } from "@/components/common/WhatsAppButton";
+import { SEO } from "@/components/common/SEO";
 import { useEffect } from "react";
 
 const AboutPage = () => {
@@ -16,6 +17,11 @@ const AboutPage = () => {
 
   return (
     <main className="min-h-screen bg-background font-sans text-foreground antialiased selection:bg-accent selection:text-accent-foreground">
+      <SEO 
+        title="About Us"
+        description="Learn about Tatu Enterprises' vision, mission, and the expert team behind East Africa's most innovative engineering and software solutions."
+        canonical="/about"
+      />
       <Navbar />
       <div>
         <AboutHero />

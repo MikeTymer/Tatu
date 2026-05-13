@@ -1,6 +1,6 @@
 import { MapPin, Phone, Mail } from "lucide-react";
 import { motion } from "motion/react";
-import { WhatsAppButton } from "./WhatsAppButton";
+import { WhatsAppButton } from "../common/WhatsAppButton";
 
 export const ContactSection = () => {
   return (

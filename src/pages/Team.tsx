@@ -1,8 +1,9 @@
-import { Navbar } from "@/components/Navbar";
-import { TeamHero } from "@/components/TeamHero";
-import { Team } from "@/components/Team";
-import { ContactFooter } from "@/components/ContactFooter";
-import { WhatsAppButton } from "@/components/WhatsAppButton";
+import { Navbar } from "@/components/layout/Navbar";
+import { TeamHero } from "@/components/sections/TeamHero";
+import { Team } from "@/components/sections/Team";
+import { ContactFooter } from "@/components/layout/ContactFooter";
+import { WhatsAppButton } from "@/components/common/WhatsAppButton";
+import { SEO } from "@/components/common/SEO";
 import { useEffect } from "react";
 
 const TeamPage = () => {
@@ -12,6 +13,11 @@ const TeamPage = () => {
 
   return (
     <main className="min-h-screen bg-background font-sans text-foreground antialiased selection:bg-accent selection:text-accent-foreground">
+      <SEO 
+        title="Our Team"
+        description="Meet the leadership team at Tatu Enterprises—experts in engineering, technology, and operational excellence."
+        canonical="/team"
+      />
       <Navbar />
       <div>
         <TeamHero />

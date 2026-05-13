@@ -1,5 +1,6 @@
 import { motion } from "motion/react";
-import heroVilla from "@/assets/hero-villa.jpg";
+// Realistic professional stock images
+const heroVilla = "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&q=80&w=1200";
 
 export const AboutHero = () => {
   return (
@@ -8,6 +9,7 @@ export const AboutHero = () => {
         <img
           src={heroVilla}
           alt="Large scale engineering project - Smart Residence"
+          referrerPolicy="no-referrer"
           className="h-full w-full object-cover"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-background/40 to-background" />

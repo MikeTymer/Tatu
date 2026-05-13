@@ -1,8 +1,9 @@
-import { Navbar } from "@/components/Navbar";
-import { ServicesHero } from "@/components/ServicesHero";
-import { Services } from "@/components/Services";
-import { ContactFooter } from "@/components/ContactFooter";
-import { WhatsAppButton } from "@/components/WhatsAppButton";
+import { Navbar } from "@/components/layout/Navbar";
+import { ServicesHero } from "@/components/sections/ServicesHero";
+import { Services } from "@/components/sections/Services";
+import { ContactFooter } from "@/components/layout/ContactFooter";
+import { WhatsAppButton } from "@/components/common/WhatsAppButton";
+import { SEO } from "@/components/common/SEO";
 import { useEffect } from "react";
 
 const ServicesPage = () => {
@@ -12,6 +13,11 @@ const ServicesPage = () => {
 
   return (
     <main className="min-h-screen bg-background font-sans text-foreground antialiased selection:bg-accent selection:text-accent-foreground">
+      <SEO 
+        title="Our Services"
+        description="Explore our range of engineering and software services: from urban surveillance and biometric systems to custom cloud infrastructure."
+        canonical="/services"
+      />
       <Navbar />
       <div>
         <ServicesHero />

@@ -1,6 +1,7 @@
 import { motion } from "motion/react";
-import biometric from "@/assets/biometric.jpg";
-import webDev from "@/assets/web-dev.jpg";
+// Realistic professional stock images
+const biometric = "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1200";
+const webDev = "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=1200";
 
 export const CoreBeliefs = () => {
   return (
@@ -18,6 +19,7 @@ export const CoreBeliefs = () => {
               <img
                 src={biometric}
                 alt="High security systems"
+                referrerPolicy="no-referrer"
                 className="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background/40 to-transparent" />
@@ -80,6 +82,7 @@ export const CoreBeliefs = () => {
               <img
                 src={webDev}
                 alt="Custom software development"
+                referrerPolicy="no-referrer"
                 className="h-full w-full object-cover transition-transform duration-700 hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background/40 to-transparent" />
