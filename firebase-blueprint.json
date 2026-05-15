@@ -1,0 +1,43 @@
+{
+  "entities": {
+    "Review": {
+      "title": "Review",
+      "description": "A client review or testimonial.",
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "The name of the client."
+        },
+        "company": {
+          "type": "string",
+          "description": "The company name or affiliation."
+        },
+        "content": {
+          "type": "string",
+          "description": "The testimonial text."
+        },
+        "rating": {
+          "type": "number",
+          "description": "Optional rating out of 5."
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "When the review was submitted."
+        },
+        "approved": {
+          "type": "boolean",
+          "description": "Whether the review is approved for display (moderation)."
+        }
+      },
+      "required": ["name", "content", "createdAt"]
+    }
+  },
+  "firestore": {
+    "reviews": {
+      "schema": "Review",
+      "description": "Collection of client reviews."
+    }
+  }
+}

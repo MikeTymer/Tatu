@@ -8,7 +8,7 @@ interface TatuLogoProps {
 export const TatuLogo = ({ className = "" }: TatuLogoProps) => (
   <div className={`flex items-center gap-3 ${className}`}>
     <img 
-      src="public/tatu-logo.png" 
+      src="/tatu-logo.png" 
       alt="Tatu Enterprises Logo" 
       className="h-10 w-10 object-contain rounded-full border border-border/10 shadow-lg"
     />

@@ -14,14 +14,6 @@ const buttonVariants = cva(
           "bg-destructive text-destructive-foreground hover:bg-destructive/90",
         outline:
           "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
-        defaultGold:
-          "bg-accent text-white hover:bg-accent/90 shadow-gold",
-        outlineGold:
-          "border-2 border-accent text-accent hover:bg-accent hover:text-accent-foreground",
-        fire:
-          "bg-gradient-fire text-white shadow-brand hover:opacity-90 transition-opacity",
-        hero:
-          "bg-gradient-fire text-white shadow-brand hover:scale-105 transition-all duration-300",
         secondary:
           "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
@@ -31,7 +23,6 @@ const buttonVariants = cva(
         default: "h-10 px-4 py-2",
         sm: "h-9 rounded-md px-3",
         lg: "h-11 rounded-md px-8",
-        xl: "h-14 rounded-xl px-10 text-base font-bold",
         icon: "h-10 w-10",
       },
     },

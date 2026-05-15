@@ -1,0 +1,41 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // 0. Global Safety Net
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // Helpers
+    function isSignedIn() { return request.auth != null; }
+    function isValidId(id) { return id is string && id.size() <= 128 && id.matches('^[a-zA-Z0-9_\\-]+$'); }
+    function incoming() { return request.resource.data; }
+    function existing() { return resource.data; }
+
+    // Validation Blueprint for Reviews
+    function isValidReview(data) {
+      return data.keys().hasAll(['name', 'content', 'createdAt']) && 
+             data.keys().size() >= 3 && data.keys().size() <= 8 &&
+             data.name is string && data.name.size() > 0 && data.name.size() <= 100 &&
+             data.content is string && data.content.size() > 0 && data.content.size() <= 2000 &&
+             data.createdAt is timestamp &&
+             (data.get('company', '') is string && data.get('company', '').size() <= 100) &&
+             (data.get('rating', 5) is number && data.get('rating', 5) >= 1 && data.get('rating', 5) <= 5) &&
+             (data.get('approved', true) is bool);
+    }
+
+    match /reviews/{reviewId} {
+      // List/Get: Only approved reviews are public
+      allow list: if resource.data.approved == true;
+      allow get: if resource.data.approved == true;
+
+      // Create: Anyone can submit a review. We've enabled auto-approval for now.
+      allow create: if isValidReview(incoming()) && 
+                       (incoming().approved == true || incoming().approved == false) &&
+                       incoming().createdAt == request.time;
+      
+      // Update/Delete: Not allowed by clients (moderation via Admin/Console)
+      allow update, delete: if false;
+    }
+  }
+}

@@ -14,7 +14,7 @@ export const SEO = ({
   description,
   canonical,
   ogType = "website",
-  ogImage = "public/tatu-logo.png",
+  ogImage = "/tatu-logo.png",
   twitterHandle = "@TatuEnterprises",
 }: SEOProps) => {
   const siteTitle = "Tatu Enterprises";
